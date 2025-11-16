@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    tools:context=".BloodStockActivity">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardBloodStock"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="6dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/headerView"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:background="#D32F2F"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <ImageView
+                android:id="@+id/iconBlood"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/bloodtype_24px"
+                app:tint="@android:color/white"
+                app:layout_constraintTop_toTopOf="@id/headerView"
+                app:layout_constraintBottom_toBottomOf="@id/headerView"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="24dp"/>
+
+            <TextView
+                android:id="@+id/Header"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:background="#D32F2F"
+                android:gravity="center_vertical"
+                android:text="@string/Bloodstock"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="@id/headerView"
+                app:layout_constraintBottom_toBottomOf="@id/headerView"
+                app:layout_constraintStart_toEndOf="@id/iconBlood" />
+
+            <TextView
+                android:id="@+id/BloodGroupLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/Bloodgroup"
+                android:textColor="#000"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/Header"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/editBloodGroup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:hint="@string/Enterbloodgroup"
+                android:inputType="text"
+                app:layout_constraintTop_toBottomOf="@id/BloodGroupLabel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/UnitsLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/UnitsAvailable"
+                android:textColor="#000"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/editBloodGroup"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/editUnits"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:hint="@string/Enternumberofunits"
+                android:inputType="number"
+                app:layout_constraintTop_toBottomOf="@id/UnitsLabel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/LocationLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/StorageLocation"
+                android:textColor="#000"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/editUnits"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/editLocation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:hint="@string/Enterhospitalname"
+                android:inputType="text"
+                app:layout_constraintTop_toBottomOf="@id/LocationLabel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="@string/Submit"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:backgroundTint="#D32F2F"
+                app:layout_constraintTop_toBottomOf="@id/editLocation"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
